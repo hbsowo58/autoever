@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            { name: "Alice", score: 85, passed: true },
+            { name: "Bob", score: 42, passed: false },
+            { name: "Charlie", score: 91, passed: true },
+            { name: "David", score: 55, passed: false },
+            { name: "Eve", score: 78, passed: true }
+        ];
+
+        // 1. forEach
+        students.forEach(student => {
+            console.log(`${student.name}: ${student.score}`);
+        });
+
+        // 2. map
+        const scores = students.map(student => student.score);
+        console.log("Scores:", scores); // [85, 42, 91, 55, 78]
+
+        // 3. filter
+        const passedStudents = students.filter(student => student.passed);
+        console.log("Passed:", passedStudents);
+
+        // 4. reduce
+        const average = students.reduce((sum, student) => sum + student.score, 0) / students.length;
+        console.log("Average Score:", average);
+
+        // 5. some
+        const hasFailing = students.some(student => student.score < 50);
+        console.log("Has Failing Student?", hasFailing); // true
+
+        // 6. every
+        const allAbove50 = students.every(student => student.score >= 50);
+        console.log("All >= 50?", allAbove50); // false
+
+        // 7. find
+        const firstFailing = students.find(student => student.score < 50);
+        console.log("First Failing:", firstFailing); // Bob
+
+        // 8. findIndex
+        const firstHighScoreIndex = students.findIndex(student => student.score >= 90);
+        console.log("Index of First >=90:", firstHighScoreIndex); // 2 (Charlie)
+
+    </script>
+</body>
+
+</html>

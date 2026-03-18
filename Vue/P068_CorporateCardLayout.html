@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>현대오토에버 뉴스/블로그 카드</title>
+    <style>
+        body {
+            margin: 0;
+            background: #fff;
+            font-family: 'Noto Sans KR', Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px 8px 24px;
+            border-bottom: 2px solid #eee;
+            background: #fff;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .navbar .menu {
+            display: flex;
+            gap: 28px;
+            font-size: 1em;
+            color: #444;
+        }
+
+        .navbar .menu span {
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 48px 0 24px 0;
+            letter-spacing: 1px;
+            color: #222;
+            text-shadow: 0 1px 0 #eee;
+        }
+
+        .card-grid {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            padding: 24px 24px 18px 24px;
+            min-width: 300px;
+            max-width: 340px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 12px;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+        }
+
+        .card .date {
+            font-size: 0.95em;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .card .title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .card .desc {
+            font-size: 1em;
+            color: #444;
+            margin-bottom: 0;
+        }
+
+        .card .img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 12px;
+            background: #eee;
+        }
+
+        @media (max-width: 1100px) {
+            .card-grid {
+                gap: 16px;
+            }
+
+            .card {
+                min-width: 220px;
+                max-width: 98vw;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .card-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 상단 네비게이션 -->
+    <nav class="navbar">
+        <span class="logo">현대오토에버</span>
+        <div class="menu">
+            <span>BUSINESS AREA</span>
+            <span>ABOUT US</span>
+            <span>IR</span>
+            <span>SUSTAINABILITY</span>
+            <span>RECRUIT</span>
+        </div>
+    </nav>
+
+    <!-- 뉴스 섹션 -->
+    <div class="section-title">뉴스</div>
+    <div class="card-grid">
+        <div class="card">
+            <div class="date">2025.01.20</div>
+            <div class="title">현대오토에버, 차량 SW 플랫폼 '모빌진' 개발성과</div>
+            <div class="desc">현대오토에버가 자체 개발한 차량 SW 플랫폼 '모빌진'이 현대차그룹의 모든 양산차에 적용되어 기술 경쟁력을 확보했습니다.</div>
+        </div>
+        <div class="card">
+            <div class="date">2025.01.19</div>
+            <div class="title">발명의 날 행사서 과기정통부 장관 표창 수상</div>
+            <div class="desc">차량 SW 개발과 지식재산권 관리 체계를 구축한 공로로 인정받아 과학기술정보통신부 장관 표창을 수상했습니다.</div>
+        </div>
+        <div class="card">
+            <div class="date">2025.01.18</div>
+            <div class="title">스마트 팩토리 솔루션으로 제조업 혁신 주도</div>
+            <div class="desc">AI와 IoT 기술을 활용한 스마트 팩토리 솔루션으로 제조업의 디지털 전환을 이끌고 있습니다.</div>
+        </div>
+    </div>
+
+    <!-- 블로그 섹션 -->
+    <div class="section-title">블로그</div>
+    <div class="card-grid">
+        <div class="card">
+            <img class="img" src="https://picsum.photos/id/1011/340/120" alt="블로그1">
+            <div class="date">2025.01.15</div>
+            <div class="title">머신러닝 다음은 휴먼 러닝! 러닝의 매력에 빠진 사람들</div>
+            <div class="desc">AI 기술의 발전과 함께 인간의 학습 방식도 변화하고 있습니다. 어선러닝을 넘어선 휴먼 러닝의 새로운 패러다임을 살펴봅니다.</div>
+        </div>
+        <div class="card">
+            <img class="img" src="https://picsum.photos/id/1015/340/120" alt="블로그2">
+            <div class="date">2025.01.12</div>
+            <div class="title">미래 스마트 물류 시스템은 우리 손으로! SDL서비스개발 팀을 만나다</div>
+            <div class="desc">현대오토에버의 스마트물류 팀이 개발한 혁신적인 물류 시스템으로 미래 물류 산업의 변화를 이끌고 있습니다.</div>
+        </div>
+        <div class="card">
+            <img class="img" src="https://picsum.photos/id/1025/340/120" alt="블로그3">
+            <div class="date">2025.01.10</div>
+            <div class="title">현대오토에버의 Mobility CRM 혁신을 만나다!</div>
+            <div class="desc">세일즈포스·에이전트포스 월드투어 코리아 2025에서 선보인 현대오토에버의 혁신적인 CRM 솔루션을 소개합니다.</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>부품 등록 폼</title>
+	<style>
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			max-width: 400px;
+		}
+
+		h1{
+			text-align: center;
+		}
+
+		label {
+			font-weight: bold;
+		}
+
+		input {
+			width:100%;
+		}
+
+		.btn-group{
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+		}
+
+		button{
+			background: green;
+			color:white;
+			cursor: pointer;
+			border:none;
+			border-radius: 5px;
+			padding:10px 30px;
+			margin-right: 5px;
+		}
+
+
+	</style>
+</head>
+
+<body>
+    <div class="center-area">
+        <form class="form-container">
+            <h1>부품 등록 폼</h1>
+            <label for="partName">부품명</label>
+            <input type="text" id="partName" name="partName" placeholder="예: 센서" required>
+
+            <label for="serial">시리얼 번호</label>
+            <input type="text" id="serial" name="serial" placeholder="예: 1234" required>
+
+            <label for="maker">제조사</label>
+            <select id="maker" name="maker" required>
+                <option value="">현대오토에버</option>
+                <option value="삼성">삼성</option>
+                <option value="LG">LG</option>
+                <option value="기타">기타</option>
+            </select>
+
+            <label for="note">비고</label>
+            <textarea id="note" name="note" placeholder="특이사항 입력"></textarea>
+
+            <div class="btn-group">
+                <button type="submit">등록</button>
+                <button type="reset">초기화</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const users = [
+			{name : "철수", age: 21},
+			{name : "영희", age: 22},
+			{name : "민수", age: 23},
+		]
+		const [firstUser, ...restUsers] = users
+		console.log(firstUser,restUsers)
+
+		const firstName = firstUser.name
+		console.log(firstName)
+
+		const names = restUsers.map(user => user.name)
+		console.log(names)
+	</script>
+</body>
+</html>

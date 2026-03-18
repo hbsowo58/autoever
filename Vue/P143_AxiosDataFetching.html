@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>[도전]axios 활용</title>
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script>
+		const url = "https://jsonplaceholder.typicode.com/todos/";
+
+
+		//IIFE Immediately Invoked Function Expression
+		(async function(){
+			const res = await axios.get(url)
+			// console.log(res.data)
+
+			console.log(res.data.filter(data => data.completed === false)
+					.filter(data => data.userId % 2 === 0)
+					.filter(data => data.title.length >= 10))
+
+		})()
+
+	</script>	
+</body>
+</html>

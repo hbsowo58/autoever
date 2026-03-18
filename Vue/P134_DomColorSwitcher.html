@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>색상바꾸기</title>
+	<style>
+		div {
+			width:100px;
+			height:100px;
+			border : 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="색상바꾸기">
+	<div></div>
+
+	<script>
+		// document.querySelector('input').addEventListener('click',setColor)
+
+
+		// function setColor(){
+		// 	document.querySelector('div').style.background = 'red';
+		// }
+		// document.querySelector('input').addEventListener('click',function (){
+		// 	document.querySelector('div').style.background = 'red';
+		// })
+
+		const colors = ['red','orange','yellow']
+		let idx = -1;
+		document.querySelector('input').addEventListener('click',function (){
+			idx++
+			if(idx >= colors.length){
+				idx = 0;
+			}
+			document.querySelector('div').style.background = colors[idx];
+		})
+
+
+	</script>
+</body>
+</html>

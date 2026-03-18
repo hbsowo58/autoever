@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>반응형 웹 예제</title>
+	<style>
+		.container{
+			border:1px solid black;
+		}
+
+		.nav{
+			border:1px solid black;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.logo{
+			font-weight: bold;
+		}
+
+		.auth-btns{
+			display: none;
+		}
+
+		.hamburger{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width:32px;
+			height:32px;
+			cursor: pointer;
+		}
+
+		.hamburger span{
+			display: block;
+			height: 4px;
+			background: #222;
+			margin: 3px 0
+		}
+
+		/* 600px이상에서는 햄버거를 숨기고, 버튼을 보이게 하기 */
+		@media (min-width: 600px){
+			.auth-btns{
+				display: flex;
+			}
+
+			.hamburger{
+				display: none;
+			}
+		}
+
+		/* 600px 미만에서는 햄버거만 보이기 */
+		@media (max-width: 599px){
+			.auth-btns{
+				display: none;
+			}
+
+			.hamburger{
+				display: flex;
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="nav">
+			<span class="logo">로고</span>
+			
+			<div class="auth-btns">
+				<button>로그인</button>
+				<button>회원가입</button>
+			</div>
+			
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+	</div>
+</body>
+</html>

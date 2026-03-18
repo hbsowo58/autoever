@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const destinations = ["제주도","강릉","부산"]
+		const bookingCounts = ["2","0","1"]
+		const isMember = true
+		const age = 25
+		const price = 100000
+
+		const count1 = Number(bookingCounts[0])
+		const count2 = Number(bookingCounts[1])
+		const count3 = Number(bookingCounts[2])
+
+		const totalCount = count1 + count2 + count3
+
+		console.log('[예약현황]')
+		console.log(destinations[0] + ":" + bookingCounts[0] + '건')
+		console.log(destinations[1] + ":" + bookingCounts[1] + '건')
+		console.log(destinations[2] + ":" + bookingCounts[2] + '건')
+		console.log("총금액 : ", price * totalCount)
+
+		if(totalCount >= 3 && isMember && age >= 20){
+			console.log("여행 추천 혜택 대상")
+		} else {
+			console.log("일반 고객")
+		}
+
+
+
+	</script>
+</body>
+</html>

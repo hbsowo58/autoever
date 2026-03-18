@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>부품 등록 폼</title>
+</head>
+
+<body>
+    <form>
+        <h1>부품 등록 폼</h1>
+        <label for="partName">부품명:</label>
+        <input type="text" id="partName" name="partName" placeholder="예: 센서" required>
+        <br>
+
+        <label for="serial">시리얼 번호:</label>
+        <input type="text" id="serial" name="serial">
+        <br>
+
+        <label for="adminPw">관리자 비밀번호:</label>
+        <input type="password" id="adminPw" name="adminPw" placeholder="6~12자" minlength="6" maxlength="12" required>
+        <br>
+
+        <label>부품 종류(한 가지만 선택)</label>
+        <div class="radio-group">
+            <label><input type="radio" name="type" value="sensor" checked> 센서</label>
+            <label><input type="radio" name="type" value="motor"> 모터</label>
+            <label><input type="radio" name="type" value="display"> 디스플레이</label>
+        </div>
+        <br>
+
+        <label for="maker">제조사:</label>
+        <select id="maker" name="maker" required>
+            <option value="">--선택--</option>
+            <option value="samsung">삼성</option>
+            <option value="lg">LG</option>
+            <option value="hyundai">현대</option>
+            <option value="etc">기타</option>
+        </select>
+        <br>
+
+        <label for="prodDate">생산일:</label>
+        <input type="date" id="prodDate" name="prodDate" placeholder="연도-월-일">
+        <br>
+
+        <label for="color">색상:</label>
+        <input type="color" id="color" name="color" value="#000000">
+        <br>
+
+        <label for="manual">매뉴얼 파일 업로드:</label>
+        <input type="file" id="manual" name="manual">
+        <br>
+
+        <label for="note">비고:</label>
+        <textarea id="note" name="note" placeholder="특이사항 입력"></textarea>
+        <br>
+
+        <div class="btns">
+            <button type="submit">등록</button>
+            <button type="reset">초기화</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const places = ["제주도","강릉","부산","설악산","여수"]
+		const seasons = ["여름","겨울","여름","가을","봄"]
+
+		const inputSeason = prompt("추천하고 싶은 계절을 입력하세요")
+
+		let result = "[추천 여행지]\n"
+
+		let flag = false;
+
+		for(let i = 0; i < places.length; i++){
+			if (inputSeason === seasons[i]){
+				result += '- ' + places[i] + '\n'
+				flag = true
+			}
+		}
+
+
+		if(!flag){
+			result += "해당 계절의 추천 여행지가 없습니다"
+		}
+
+		console.log(result)
+	</script>
+</body>
+</html>

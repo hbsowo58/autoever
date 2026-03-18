@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>[실습]반응형 웹</title>
+    <style>
+        body {
+            margin: 0;
+            background: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #18469a;
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: bold;
+            padding: 32px 0 24px 48px;
+            letter-spacing: 1px;
+            position: relative;
+            border-bottom-left-radius: 32px;
+            /* 왼쪽 상단 사선 효과 */
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%);
+        }
+
+        .center-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 80vh;
+            margin-top: 32px;
+        }
+
+        .grid-2x2 {
+            display: grid;
+            grid-template-columns: 90px 90px;
+            grid-template-rows: 90px 90px;
+            gap: 0;
+            margin-bottom: 48px;
+        }
+
+        .box1 {
+            background: #f22;
+            color: #222;
+        }
+
+        .box2 {
+            background: #f7b032;
+            color: #222;
+        }
+
+        .box3 {
+            background: #fffd5c;
+            color: #222;
+        }
+
+        .box4 {
+            background: #217a1e;
+            color: #fff;
+        }
+
+        .grid-2x2>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .grid-2x2 {
+                grid-template-columns: 60px 60px;
+                grid-template-rows: 60px 60px;
+            }
+
+            .header {
+                font-size: 1.3em;
+                padding-left: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">[실습]반응형 웹</div>
+    <div class="center-area">
+        <!-- 첫 번째 2x2 박스 -->
+        <div class="grid-2x2">
+            <div class="box1">Box1</div>
+            <div class="box2">Box2</div>
+            <div class="box3">Box3</div>
+            <div class="box4">Box4</div>
+        </div>
+        <!-- 두 번째 2x2 박스 -->
+        <div class="grid-2x2">
+            <div class="box1">Img1</div>
+            <div class="box2">Img2</div>
+            <div class="box3">Img3</div>
+            <div class="box4">Img4</div>
+        </div>
+    </div>
+</body>
+
+</html>

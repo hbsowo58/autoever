@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>[도전]가격 계산기 만들기</title>
+</head>
+<body>
+	<script>
+		//함수 선언문
+		function getDiscountedPrice(basePrice, discountAmount, discountRate){
+			return basePrice - (discountAmount * discountRate)
+		}
+
+		//함수 표현식
+		const getDiscountedPrice2 = function(basePrice, discountAmount, discountRate){
+			return basePrice - (discountAmount * discountRate)
+		}
+
+		//화살표 함수
+		const getDiscountedPrice3 = (basePrice, discountAmount, discountRate) => {
+			return basePrice - (discountAmount * discountRate)
+		}
+
+		const getDiscountedPrice4 = (basePrice, discountAmount, discountRate) => basePrice - (discountAmount * discountRate)
+		
+
+		const discountAmount = 20000
+		const discountRate = 1.1
+		const jejuPrice = getDiscountedPrice2(200000, discountAmount,discountRate)
+		const gangneungPrice = getDiscountedPrice3(150000, discountAmount,discountRate)
+		const busanPrice = getDiscountedPrice4(180000, discountAmount,discountRate)
+
+		console.log("제주도 가격 : " + jejuPrice + '원')
+		console.log("강릉 가격 : " + gangneungPrice + '원')
+		console.log("부산 가격 : " + busanPrice + '원')
+		
+
+	</script>
+</body>
+</html>
